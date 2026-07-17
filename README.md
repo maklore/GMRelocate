@@ -25,6 +25,7 @@
     ```
   - The `target_instance` can be either an object, instance, or as is.
   - The `target_room` can be either a room, empty, or as is.
+    >If the `target_room` is empty, then the `target_instance` target needs to be in the same room.
 
   - If the names stay as is then you can use `Variable Definitions` as shown below.
   <img width="930" height="450" alt="Screenshot_20260717_220306" src="https://github.com/user-attachments/assets/f2a2e477-5ca2-491f-bd6e-d631018b51b1" />
