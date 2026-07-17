@@ -1,5 +1,5 @@
 /**
-* Relocates the player within or between rooms to target instance or object.
+* Relocate the player within or between rooms to target instance or object.
 * @returns {struct.GMRelocate}
 */
 function GMRelocate(){
