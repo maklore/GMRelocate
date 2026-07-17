@@ -17,10 +17,13 @@ function GMRelocate(){
 		player : undefined
 	}
 	
+	/**
+	* Set player object.
+	* @param {asset.object} _player Player object.
+	*/
 	static init = function(_player) {
 		__target.player = _player;	
 	}
-	
 	
 	/**
 	* Go to target room and select target object.
@@ -44,7 +47,7 @@ function GMRelocate(){
 	*/
 	static reset = function() {
 		if __target.id == undefined { exit; }
-		with other {
+		with __target.player {
 			if instance_place(x, y, other.__target.id) == noone {
 				other.__target.room	   = undefined;
 				other.__target.id	   = undefined;
