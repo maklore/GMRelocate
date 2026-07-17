@@ -7,21 +7,21 @@
 - Create player object (recommended to set as persistent).
 - Initialize GMRelocate in player objects `Create` event.
   ```gml
-  GMRelocate.init(self);
+  GMRelocate().init(self);
   ```
 - Add to player objects `Room Start` event.
   ```gml
-  GMRelocate.relocate();
+  GMRelocate().relocate();
   ```
 - Add to player objects `End Step` event.
   ```gml
-  GMRelocate.reset();
+  GMRelocate().reset();
   ```
   > Resets when the player object is no longer colliding with the relocator object.
 - Create the relocator object.
   - Add to any collision with player check.
     ```gml
-    GMRelocate.goto(target_instance, target_room);
+    GMRelocate().goto(target_instance, target_room);
     ```
   - The `target_instance` can be either an object, instance, or as is.
   - The `target_room` can be either a room, empty, or as is.
