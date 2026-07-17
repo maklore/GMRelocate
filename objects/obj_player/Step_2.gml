@@ -1,0 +1,1 @@
+GMRelocate.reset();

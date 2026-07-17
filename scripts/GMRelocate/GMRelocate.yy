@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GMRelocate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMRelocate",
+  "parent":{
+    "name":"GMRelocate",
+    "path":"folders/GMRelocate.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
