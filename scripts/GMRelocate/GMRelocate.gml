@@ -14,22 +14,28 @@ function GMRelocate(){
 		room : undefined,
 		id : undefined,
 		collide : false,
+		player : undefined
 	}
+	
+	static init = function(_player) {
+		__target.player = _player;	
+	}
+	
 	
 	/**
 	* Go to target room and select target object.
-	* @param {asset.room} _room Target room.
 	* @param {asset.object | id.instance} _object Target object or instance.
+	* @param {asset.room} _room Target room.
 	*/
 	static goto = function(_object_or_instance, _room = noone) {
 		if __target.collide { exit; }
 		__target.room	 = _room;
-		__target.id		 = _object;
+		__target.id		 = _object_or_instance;
 		__target.collide = true;
 		if _room != noone {
 			room_goto(_room);
 		} else {
-			
+			relocate();
 		}
 	}
 	
@@ -62,8 +68,8 @@ function GMRelocate(){
 		}
 		var _target_center = __target.id.bbox_left + __target.id.sprite_width  * 0.5;
 		var _target_middle = __target.id.bbox_top  + __target.id.sprite_height * 0.5;
-		other.x = _target_center;
-		other.y = _target_middle;
+		__target.player.x = _target_center;
+		__target.player.y = _target_middle;
 
 	}
 		

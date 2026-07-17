@@ -1,1 +1,1 @@
-GMRelocate.goto(target_room, target_instance);
+GMRelocate.goto(target_instance, target_room);
