@@ -19,7 +19,7 @@
   ```
   > Resets when the player object is no longer colliding with the relocator object.
 - Create the relocator object.
-  - Add to any collision with player check.
+  - Add to any desired trigger to relocate the player.
     ```gml
     GMRelocate.goto(target_instance, target_room);
     ```
