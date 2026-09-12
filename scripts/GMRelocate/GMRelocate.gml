@@ -3,13 +3,7 @@
 * @returns {struct.GMRelocate}
 */
 function GMRelocate(){
-	
-	static __transporter = undefined;
-	
-	if __transporter != undefined {
-		return __transporter;	
-	}
-	
+		
 	static __target = {
 		room : undefined,
 		id : undefined,
@@ -76,7 +70,7 @@ function GMRelocate(){
 
 	}
 		
-	__transporter = static_get(GMRelocate);
+	return static_get(GMRelocate);
 
 }
 
